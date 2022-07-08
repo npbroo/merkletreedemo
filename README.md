@@ -12,7 +12,7 @@ How to run
 2.) use git to download and install the merkle tree demo.
 
     - go to your terminal and type
-        "git clone "
+        "git clone https://github.com/npbroo/merkletreedemo.git"
 
 3.) next open up the project directory that you just cloned in visual studio code
 
