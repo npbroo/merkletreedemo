@@ -17,8 +17,8 @@ contract MerkleTree is Ownable{
     }
 
     // --- FUNCTIONS ---- //
-    function testMerkle(bytes32[] calldata _merkleProof, uint256 tokenId, uint256 rarity ) public {
-        bytes32 leaf = keccak256(abi.encodePacked(tokenId, rarity));
+    function testMerkle(bytes32[] calldata _merkleProof) public {
+        bytes32 leaf = keccak256(abi.encodePacked(msg.sender));
         require(MerkleProof.verify(_merkleProof, merkleRoot, leaf), "Invalid Merkle Proof.");
         worked = true;
     }
